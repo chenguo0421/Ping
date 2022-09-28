@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_domain"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="请输入目标IP/域名 "
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ping"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_domain"
+        app:layout_constraintEnd_toStartOf="@+id/tv_stop"
+        android:background="#000000"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Ping"
+        app:layout_constraintStart_toEndOf="@+id/tv_ping"
+        app:layout_constraintTop_toBottomOf="@+id/edt_domain"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#000000"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ping">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_ping_ret"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+          />
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
